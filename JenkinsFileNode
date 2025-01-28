@@ -1,0 +1,17 @@
+pipeline {
+    agent {
+        node {
+            label 'LinuxNS'
+            customWorkspace '/mnt/Jenkins'
+            
+  }
+}
+
+    stages {
+        stage('Makedirectoty') {
+            steps {
+                sh 'mkdir JenkinsFolder'
+            }
+        }
+    }
+}
