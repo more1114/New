@@ -1,0 +1,25 @@
+pipeline {
+    agent {
+        node {
+            label 'SlaveJ'
+        }
+    }
+    stages {
+        stage('Clone') { 
+            steps {
+               sh 'git Clone https://github.com/more1114/New.git'
+                 
+            }
+        }
+        stage('Build') { 
+            steps {
+                echo "Building Project" 
+            }
+        }
+        stage('Test') { 
+            steps {
+                echo "Performimg testing"
+            }
+        }
+    }
+}
